@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>مدونة M.K.S سيرفس | التوريدات · النظافة الخضراء · إدارة المخاطر</title>
+    <meta name="description" content="مدونة متخصصة تقدم مقالات واستراتيجيات في التوريدات العمومية، النظافة الخضراء، وإدارة المخاطر الأمنية – من خبراء M.K.S سيرفس.">
+    <meta name="keywords" content="مدونة, توريدات, نظافة خضراء, إدارة مخاطر, أمن, M.K.S">
+    <meta name="author" content="M.K.S Service">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mksservices.netlify.app/blog.html">
+    <meta property="og:title" content="مدونة M.K.S سيرفس">
+    <meta property="og:description" content="نصائح واستراتيجيات في التوريدات، النظافة الخضراء، وإدارة المخاطر الأمنية.">
+    <meta property="og:image" content="https://i.ibb.co/tw2bgLWw/1.png">
+    <meta property="og:url" content="https://mksservices.netlify.app/blog.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: #1a3c51;
+            color: #D4AF37;
+            padding: 0;
+        }
+        .top-bar {
+            background: #0e2a3a;
+            padding: 8px 16px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 13px;
+            border-bottom: 1px solid #D4AF37;
+        }
+        .top-bar a { color: #E5C687; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+        .top-bar a:hover { color: #D4AF37; }
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #1a3c51;
+            border-bottom: 1px solid #D4AF37;
+            padding: 10px 16px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .logo-area { display: flex; align-items: center; gap: 15px; }
+        .logo-img { max-width: 70px; height: auto; }
+        .company-name { font-size: clamp(24px, 6vw, 32px); font-weight: 800; color: #D4AF37; }
+        .lang-switch {
+            background: transparent;
+            border: 1px solid #D4AF37;
+            color: #D4AF37;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+        }
+        .nav-bar {
+            max-width: 600px;
+            margin: 8px auto 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 8px 16px;
+            border-top: 1px solid rgba(212,175,55,0.3);
+        }
+        .nav-bar a { color: #E5C687; text-decoration: none; font-size: 14px; font-weight: 500; }
+        .nav-bar a:hover { color: #D4AF37; }
+        .blog-header {
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+        .blog-header h1 {
+            font-size: 32px;
+            font-weight: 800;
+            display: inline-block;
+            border-bottom: 3px solid #D4AF37;
+            padding-bottom: 8px;
+        }
+        .blog-grid {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        .blog-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 28px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 25px -10px rgba(0,0,0,0.4);
+            background: rgba(255,255,255,0.1);
+        }
+        .blog-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #D4AF37;
+        }
+        .blog-content {
+            padding: 20px;
+        }
+        .blog-title {
+            font-size: 22px;
+            font-weight: 800;
+            color: #D4AF37;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: #E5C687;
+        }
+        .blog-summary {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #F0F0F0;
+            margin-bottom: 20px;
+        }
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #D4AF37;
+            color: #1a3c51;
+            text-decoration: none;
+            font-weight: 800;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+        .read-more:hover {
+            background: #C59B2E;
+            transform: scale(1.02);
+        }
+        .footer {
+            background: #0e2a3a;
+            padding: 30px 20px 20px;
+            margin-top: 40px;
+            border-top: 1px solid #D4AF37;
+        }
+        .footer-container {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 25px;
+        }
+        .footer-col { flex: 1; min-width: 160px; }
+        .footer-col h4 { color: #D4AF37; margin-bottom: 15px; font-size: 18px; }
+        .footer-col p, .footer-col a { font-size: 13px; color: #E5C687; text-decoration: none; display: block; margin-bottom: 8px; }
+        .footer-col a:hover { color: #D4AF37; }
+        .social-icons { display: flex; gap: 12px; margin-top: 10px; }
+        .social-icons a { font-size: 20px; }
+        .copyright { text-align: center; font-size: 12px; color: #aaa; margin-top: 30px; padding-top: 15px; border-top: 1px solid rgba(212,175,55,0.3); }
+        @media (max-width: 480px) {
+            .blog-title { font-size: 18px; }
+            .blog-img { height: 160px; }
+        }
+        @media print {
+            .top-bar, .sticky-header, .nav-bar, .footer, .social-icons, .lang-switch, .read-more { display: none !important; }
+            body, .blog-grid, .blog-card { background: white !important; color: black !important; }
+            .blog-card { border: 1px solid #ccc; box-shadow: none; }
+            .blog-title, .blog-summary, .blog-meta { color: black !important; }
+            img { filter: grayscale(100%); }
+            @page { margin: 1.5cm; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <a href="tel:01500027095"><i class="fas fa-phone-alt"></i> 01500027095</a>
+    <a href="https://wa.me/201500027095" target="_blank"><i class="fab fa-whatsapp"></i> واتساب</a>
+    <a href="mailto:mks.services.eg@gmail.com"><i class="fas fa-envelope"></i> mks.services.eg@gmail.com</a>
+</div>
+
+<div class="sticky-header">
+    <div class="header">
+        <div class="logo-area">
+            <img src="https://i.ibb.co/tw2bgLWw/1.png" alt="شعار M.K.S سيرفس" class="logo-img" loading="lazy">
+            <div class="company-name">M.K.S سيرفس</div>
+        </div>
+        <button id="langSwitchBtn" class="lang-switch">English</button>
+    </div>
+    <div class="nav-bar">
+        <a href="index.html">الرئيسية</a>
+        <a href="index.html#supplyTitle">التوريدات</a>
+        <a href="index.html#riskTitle">تقييم المخاطر الأمنية</a>
+        <a href="index.html#cleaningTitle">النظافة</a>
+        <a href="blog.html">المدونة</a>
+        <a href="index.html#contactTitle">اتصل بنا</a>
+    </div>
+</div>
+
+<div class="blog-header">
+    <h1 id="blogTitle">المدونة</h1>
+</div>
+
+<div class="blog-grid">
+    <!-- مقال 1 - استراتيجيات التوريد -->
+    <div class="blog-card">
+        <img class="blog-img" src="https://i.ibb.co/XrpWh4Pb/5.png" alt="استراتيجيات التوريد">
+        <div class="blog-content">
+            <div class="blog-title" id="blogTitle1">استراتيجيات التوريد الحديثة</div>
+            <div class="blog-meta" id="blogMeta1"><span><i class="fas fa-calendar-alt"></i> ٢ يونيو ٢٠٢٦</span><span><i class="fas fa-tag"></i> توريدات</span></div>
+            <div class="blog-summary" id="blogSummary1">تعرف على أحدث استراتيجيات التوريد لخفض التكاليف وزيادة الكفاءة، مع نموذج بطاقة تقييم الموردين ونصائح عملية لاختيار الموردين بدقة.</div>
+            <a href="article-supply-strategies.html" class="read-more" id="readMore1">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+    </div>
+    <!-- مقال 2 - النظافة الخضراء -->
+    <div class="blog-card">
+        <img class="blog-img" src="https://i.ibb.co/4gRXK2vX/2.png" alt="النظافة الخضراء">
+        <div class="blog-content">
+            <div class="blog-title" id="blogTitle2">النظافة الخضراء: استدامة بيئة العمل</div>
+            <div class="blog-meta" id="blogMeta2"><span><i class="fas fa-calendar-alt"></i> ٣٠ مايو ٢٠٢٦</span><span><i class="fas fa-tag"></i> نظافة</span></div>
+            <div class="blog-summary" id="blogSummary2">اكتشف منهجية النظافة الخضراء، فوائدها الصحية والاقتصادية، وخطة تطبيقية من 30 يوماً لنقل منشأتك إلى العصر الأخضر.</div>
+            <a href="article-green-cleaning.html" class="read-more" id="readMore2">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+    </div>
+    <!-- مقال 3 - إدارة المخاطر -->
+    <div class="blog-card">
+        <img class="blog-img" src="https://i.ibb.co/h17B343X/10.png" alt="إدارة المخاطر">
+        <div class="blog-content">
+            <div class="blog-title" id="blogTitle3">إدارة المخاطر المتكاملة للمنشآت</div>
+            <div class="blog-meta" id="blogMeta3"><span><i class="fas fa-calendar-alt"></i> ٢٨ مايو ٢٠٢٦</span><span><i class="fas fa-tag"></i> مخاطر</span></div>
+            <div class="blog-summary" id="blogSummary3">دليل شامل لتقييم المخاطر، محاكاة الاختراقات، توزيع كاميرات المراقبة، خطط الطوارئ، وأدوار الحراسة أثناء الأزمات.</div>
+            <a href="article-risk-management.html" class="read-more" id="readMore3">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h4>M.K.S سيرفس</h4>
+            <p>نظام بيئي خدمي متكامل يضمن استقرار استثماراتكم.</p>
+            <p><i class="fas fa-map-marker-alt"></i> 57 حسن الشريف - مدينة نصر، القاهرة</p>
+            <p><i class="fas fa-phone"></i> 01500027095 / 01204423095</p>
+            <p><i class="fas fa-envelope"></i> mks.services.eg@gmail.com</p>
+        </div>
+        <div class="footer-col">
+            <h4>روابط سريعة</h4>
+            <a href="index.html">الرئيسية</a>
+            <a href="index.html#supplyTitle">التوريدات</a>
+            <a href="index.html#riskTitle">تقييم المخاطر الأمنية</a>
+            <a href="index.html#cleaningTitle">النظافة</a>
+            <a href="blog.html">المدونة</a>
+            <a href="index.html#contactTitle">اتصل بنا</a>
+        </div>
+        <div class="footer-col">
+            <h4>تابعنا</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">© 2026 M.K.S سيرفس – جميع الحقوق محفوظة</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+<script>
+    // ترجمة بسيطة للمدونة (العناوين والملخصات)
+    let isArabic = true;
+    const langBtn = document.getElementById('langSwitchBtn');
+    const titles = { ar: "المدونة", en: "Blog" };
+    const blogTitlesAr = ["استراتيجيات التوريد الحديثة", "النظافة الخضراء: استدامة بيئة العمل", "إدارة المخاطر المتكاملة للمنشآت"];
+    const blogTitlesEn = ["Modern Supply Strategies", "Green Cleaning: Workplace Sustainability", "Integrated Facility Risk Management"];
+    const blogSummariesAr = [
+        "تعرف على أحدث استراتيجيات التوريد لخفض التكاليف وزيادة الكفاءة، مع نموذج بطاقة تقييم الموردين ونصائح عملية لاختيار الموردين بدقة.",
+        "اكتشف منهجية النظافة الخضراء، فوائدها الصحية والاقتصادية، وخطة تطبيقية من 30 يوماً لنقل منشأتك إلى العصر الأخضر.",
+        "دليل شامل لتقييم المخاطر، محاكاة الاختراقات، توزيع كاميرات المراقبة، خطط الطوارئ، وأدوار الحراسة أثناء الأزمات."
+    ];
+    const blogSummariesEn = [
+        "Learn the latest supply strategies to reduce costs and increase efficiency, with a supplier scorecard and practical tips.",
+        "Discover green cleaning methodology, its health and economic benefits, and a 30‑day implementation plan.",
+        "A complete guide to risk assessment, penetration testing, CCTV distribution, emergency plans, and guard roles."
+    ];
+    const readMoreAr = "اقرأ المزيد";
+    const readMoreEn = "Read more";
+
+    langBtn.addEventListener('click', () => {
+        isArabic = !isArabic;
+        document.getElementById('blogTitle').innerText = isArabic ? titles.ar : titles.en;
+        for (let i = 1; i <= 3; i++) {
+            document.getElementById(`blogTitle${i}`).innerText = isArabic ? blogTitlesAr[i-1] : blogTitlesEn[i-1];
+            document.getElementById(`blogSummary${i}`).innerText = isArabic ? blogSummariesAr[i-1] : blogSummariesEn[i-1];
+            document.getElementById(`readMore${i}`).innerHTML = (isArabic ? readMoreAr : readMoreEn) + ' <i class="fas fa-arrow-left"></i>';
+        }
+        langBtn.innerText = isArabic ? 'English' : 'العربية';
+        document.documentElement.setAttribute('dir', isArabic ? 'rtl' : 'ltr');
+    });
+</script>
+</body>
+</html>
