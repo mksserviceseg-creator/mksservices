@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<!-- ============================================================
+     M.K.S سيرفس - معرض الصور (Gallery)
+     يمكنك إضافة صور جديدة بسهولة عن طريق تكرار عنصر .gallery-item
+     ============================================================ -->
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>معرض الصور | M.K.S سيرفس</title>
+    <meta name="description" content="معرض صور شركة M.K.S سيرفس – خدمات التوريدات، تقييم المخاطر الأمنية، النظافة الشاملة، وفريق العمل.">
+    <meta name="keywords" content="M.K.S, معرض صور, توريدات, نظافة, أمن, حراسة">
+    <meta name="author" content="M.K.S Service">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mksserviceseg-creator.github.io/mksservices/gallery.html">
+    <meta property="og:title" content="معرض الصور | M.K.S سيرفس">
+    <meta property="og:description" content="استعراض صور خدمات M.K.S سيرفس في التوريدات، الأمن، والنظافة.">
+    <meta property="og:image" content="https://i.ibb.co/tw2bgLWw/1.png">
+    <meta property="og:url" content="https://mksserviceseg-creator.github.io/mksservices/gallery.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: #1a3c51;
+            color: #D4AF37;
+            padding: 0;
+        }
+        .top-bar {
+            background: #0e2a3a;
+            padding: 8px 16px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 13px;
+            border-bottom: 1px solid #D4AF37;
+        }
+        .top-bar a {
+            color: #E5C687;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .top-bar a:hover { color: #D4AF37; }
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #1a3c51;
+            border-bottom: 1px solid #D4AF37;
+            padding: 10px 16px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo-img {
+            max-width: 70px;
+            height: auto;
+        }
+        .company-name {
+            font-size: clamp(24px, 6vw, 32px);
+            font-weight: 800;
+            color: #D4AF37;
+        }
+        .lang-switch {
+            background: transparent;
+            border: 1px solid #D4AF37;
+            color: #D4AF37;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+        }
+        .nav-bar {
+            max-width: 600px;
+            margin: 8px auto 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 8px 16px;
+            border-top: 1px solid rgba(212,175,55,0.3);
+        }
+        .nav-bar a {
+            color: #E5C687;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .nav-bar a:hover { color: #D4AF37; }
+        .gallery-container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px 16px;
+            background: transparent;
+        }
+        .gallery-title {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            border-right: 4px solid #D4AF37;
+            padding-right: 16px;
+            color: #D4AF37;
+        }
+        .gallery-subtitle {
+            color: #E5C687;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        .gallery-item {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #D4AF37;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-item .caption {
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: #F0F0F0;
+            background: rgba(0,0,0,0.3);
+        }
+        /* الفوتر */
+        .footer {
+            background: #0e2a3a;
+            padding: 30px 20px 20px;
+            margin-top: 40px;
+            border-top: 1px solid #D4AF37;
+        }
+        .footer-container {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 25px;
+        }
+        .footer-col {
+            flex: 1;
+            min-width: 160px;
+        }
+        .footer-col h4 {
+            color: #D4AF37;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .footer-col p, .footer-col a {
+            font-size: 13px;
+            color: #E5C687;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .footer-col a:hover { color: #D4AF37; }
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+        }
+        .social-icons a {
+            font-size: 20px;
+        }
+        .copyright {
+            text-align: center;
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(212,175,55,0.3);
+        }
+        /* تنسيق الطباعة */
+        @media print {
+            .top-bar, .sticky-header, .nav-bar, .footer, .social-icons { display: none !important; }
+            body { background: white !important; color: black !important; }
+            .gallery-item { border-color: #ccc !important; }
+            .gallery-item .caption { color: black !important; background: #f5f5f5 !important; }
+            .gallery-title { color: black !important; border-color: #999 !important; }
+            img { filter: grayscale(100%); }
+            @page { margin: 1.5cm; }
+        }
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+            .gallery-item img {
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- شريط اتصال علوي -->
+<div class="top-bar">
+    <a href="tel:01500027095"><i class="fas fa-phone-alt"></i> 01500027095</a>
+    <a href="https://wa.me/201500027095" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> واتساب</a>
+    <a href="mailto:mks.services.eg@gmail.com"><i class="fas fa-envelope"></i> mks.services.eg@gmail.com</a>
+</div>
+
+<!-- الهيدر الثابت -->
+<div class="sticky-header">
+    <div class="header">
+        <div class="logo-area">
+            <img src="https://i.ibb.co/tw2bgLWw/1.png" alt="شعار M.K.S سيرفس" class="logo-img" loading="lazy">
+            <div class="company-name">M.K.S سيرفس</div>
+        </div>
+        <button id="langSwitchBtn" class="lang-switch">English</button>
+    </div>
+    <div class="nav-bar">
+        <a href="index.html">الرئيسية</a>
+        <a href="index.html#supplyTitle">التوريدات</a>
+        <a href="index.html#riskTitle">تقييم المخاطر الأمنية</a>
+        <a href="index.html#cleaningTitle">النظافة</a>
+        <a href="blog.html">المدونة</a>
+        <a href="gallery.html">معرض الصور</a>
+        <a href="index.html#contactTitle">اتصل بنا</a>
+    </div>
+</div>
+
+<!-- محتوى صفحة المعرض -->
+<div class="gallery-container">
+    <h1 class="gallery-title">📸 معرض الصور</h1>
+    <p class="gallery-subtitle">استعرض صور خدماتنا وفريق العمل والمشاريع السابقة.</p>
+
+    <div class="gallery-grid">
+        <!-- ========================================== -->
+        <!-- يمكنك إضافة صور جديدة عن طريق تكرار هذا الكتلة -->
+        <!-- <div class="gallery-item">
+            <img src="رابط_الصورة" alt="وصف الصورة" loading="lazy">
+            <div class="caption">عنوان الصورة</div>
+        </div> -->
+        <!-- ========================================== -->
+
+        <!-- الصور الحالية -->
+        <div class="gallery-item">
+            <img src="https://i.ibb.co/tw2bgLWw/1.png" alt="شعار M.K.S سيرفس" loading="lazy">
+            <div class="caption">شعار الشركة</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co/XrpWh4Pb/5.png" alt="التوريدات" loading="lazy">
+            <div class="caption">التوريدات العمومية</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co/HTQ5FN7h/2.png" alt="تقييم المخاطر الأمنية" loading="lazy">
+            <div class="caption">تقييم المخاطر الأمنية</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co/4gRXK2vX/2.png" alt="النظافة 1" loading="lazy">
+            <div class="caption">النظافة الشاملة (1)</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co/9mpc3JrC/3.png" alt="النظافة 2" loading="lazy">
+            <div class="caption">النظافة الشاملة (2)</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co/h17B343X/10.png" alt="تقييم المخاطر" loading="lazy">
+            <div class="caption">تقييم المخاطر</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co/tFQZgwN/12.png" alt="مزايا الشركة" loading="lazy">
+            <div class="caption">لماذا تختارنا؟</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co/4w8ww0JK/13.png" alt="شركاء النجاح" loading="lazy">
+            <div class="caption">شركاء النجاح</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co/HTSmzJg0/M-K-S-1.png" alt="التواصل" loading="lazy">
+            <div class="caption">تواصل معنا</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co/3YzHtF48/Whats-App-Image-2026-06-01-at-4-47-46-PM-2.jpg" alt="شريك 1" loading="lazy">
+            <div class="caption">شريك نجاح (1)</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co/GvWKfqd9/Whats-App-Image-2026-06-01-at-4-47-46-PM-1.jpg" alt="شريك 2" loading="lazy">
+            <div class="caption">شريك نجاح (2)</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co/cXDr0RQJ/image.png" alt="شريك 3" loading="lazy">
+            <div class="caption">شريك نجاح (3)</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co/qMd7MQmk/555.jpg" alt="شريك 4" loading="lazy">
+            <div class="caption">شريك نجاح (4)</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co/LdR5f0jq/Whats-App-Image-2026-06-01-at-4-47-46-PM-3.jpg" alt="شريك 5" loading="lazy">
+            <div class="caption">شريك نجاح (5)</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.ibb.co/9QmjKvK/Whats-App-Image-2026-06-01-at-4-47-46-PM.jpg" alt="شريك 6" loading="lazy">
+            <div class="caption">شريك نجاح (6)</div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- يمكنك إضافة صور جديدة هنا بتكرار الكتلة أعلاه -->
+        <!-- مثال:
+        <div class="gallery-item">
+            <img src="رابط_صورتك_الجديدة" alt="وصف الصورة" loading="lazy">
+            <div class="caption">عنوان الصورة</div>
+        </div>
+        -->
+        <!-- ========================================== -->
+    </div>
+</div>
+
+<!-- الفوتر -->
+<div class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h4>M.K.S سيرفس</h4>
+            <p>نظام بيئي خدمي متكامل يضمن استقرار استثماراتكم.</p>
+            <p><i class="fas fa-map-marker-alt"></i> 57 حسن الشريف - مدينة نصر، القاهرة</p>
+            <p><i class="fas fa-phone"></i> 01500027095 / 01204423095</p>
+            <p><i class="fas fa-envelope"></i> mks.services.eg@gmail.com</p>
+        </div>
+        <div class="footer-col">
+            <h4>روابط سريعة</h4>
+            <a href="index.html">الرئيسية</a>
+            <a href="index.html#supplyTitle">التوريدات</a>
+            <a href="index.html#riskTitle">تقييم المخاطر الأمنية</a>
+            <a href="index.html#cleaningTitle">النظافة</a>
+            <a href="blog.html">المدونة</a>
+            <a href="gallery.html">معرض الصور</a>
+            <a href="index.html#contactTitle">اتصل بنا</a>
+        </div>
+        <div class="footer-col">
+            <h4>تابعنا</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        © 2026 M.K.S سيرفس – جميع الحقوق محفوظة
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+<script>
+    // زر تغيير اللغة (وظيفة بسيطة)
+    let isArabic = true;
+    const langBtn = document.getElementById('langSwitchBtn');
+    langBtn.addEventListener('click', () => {
+        isArabic = !isArabic;
+        langBtn.innerText = isArabic ? 'English' : 'العربية';
+        document.documentElement.setAttribute('dir', isArabic ? 'rtl' : 'ltr');
+    });
+</script>
+</body>
+</html>
