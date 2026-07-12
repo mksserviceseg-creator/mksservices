@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.io</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://mksserviceseg-creator.github.io/mksservices/</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://github.ioblog.html</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://mksserviceseg-creator.github.io/mksservices/blog.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://github.ioarticle-supply-strategies.html</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://mksserviceseg-creator.github.io/mksservices/gallery.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mksserviceseg-creator.github.io/mksservices/article-supply-strategies.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://github.ioarticle-green-cleaning.html</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://mksserviceseg-creator.github.io/mksservices/article-green-cleaning.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://github.ioarticle-risk-management.html</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://mksserviceseg-creator.github.io/mksservices/article-risk-management.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
